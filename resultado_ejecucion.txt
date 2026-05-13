@@ -1,0 +1,66 @@
+======================================================================
+SISTEMA INTEGRAL DE GESTIÓN DE CLIENTES, SERVICIOS Y RESERVAS
+Empresa: Software FJ
+======================================================================
+
+OPERACIÓN 1: Registro válido de cliente
+Cliente[CLI001] Laura Gómez | Documento: 1020304050 | Correo: laura.gomez@mail.com
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 2: Registro inválido de cliente por correo incorrecto
+ERROR CONTROLADO: El correo electrónico no tiene un formato válido.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 3: Creación de cliente con parámetro faltante
+ERROR CONTROLADO: Falta el parámetro obligatorio: 'correo'.
+Causa original: 'correo'
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 4: Registro de tres servicios válidos con herencia y polimorfismo
+Reserva de sala para 25 personas, con video beam.
+Alquiler de equipo: Portátil, incluye seguro.
+Asesoría especializada en Sistemas, nivel senior.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 5: Creación incorrecta de servicio por tarifa negativa
+ERROR CONTROLADO: La tarifa debe ser mayor que cero.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 6: Reserva exitosa de sala, confirmación y procesamiento con IVA y descuento
+Reserva[RES001] Cliente: Laura Gómez | Servicio: Sala de reuniones premium | Duración: 3 horas | Estado: Procesada | Costo final: $340,578.00
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 7: Reserva fallida por servicio no disponible
+ERROR CONTROLADO: No se pudo confirmar la reserva RES002.
+Causa original: El equipo no está disponible.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 8: Cancelación correcta de reserva creada
+Reserva[RES003] Cliente: Laura Gómez | Servicio: Asesoría en arquitectura de software | Duración: 2 horas | Estado: Cancelada
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 9: Intento incorrecto de procesar una reserva cancelada
+ERROR CONTROLADO: No se pudo procesar la reserva RES003.
+Causa original: Solo se pueden procesar reservas confirmadas.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 10: Métodos tipo sobrecarga para calcular costos
+Costo básico: $384,000.00
+Costo con descuento: $326,400.00
+Costo con descuento e IVA: $388,416.00
+Costo con código promocional FJ10: $388,416.00
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 11: Reserva inválida por duración igual a cero
+ERROR CONTROLADO: La duración de la reserva debe ser un entero positivo.
+Estado: la aplicación continúa funcionando.
+
+OPERACIÓN 12: Reserva fallida por servicio inexistente
+ERROR CONTROLADO: No existe el servicio SER999.
+Estado: la aplicación continúa funcionando.
+
+======================================================================
+REPORTE FINAL
+Clientes registrados: 1 | Servicios registrados: 3 | Reservas registradas: 3
+Revise el archivo logs/sistema_fj.log para ver eventos y errores.
+======================================================================
